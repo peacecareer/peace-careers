@@ -1,99 +1,132 @@
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
+import FadeIn from "@/components/ui/FadeIn";
 
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-white via-stone-50 to-yellow-50">
-      <Container className="py-24 lg:grid lg:grid-cols-2 lg:gap-20 lg:items-center">
 
-        {/* LEFT COLUMN */}
-        <div>
+      {/* Decorative Background */}
+      <div className="absolute -left-32 top-0 h-96 w-96 rounded-full bg-yellow-200/20 blur-3xl"></div>
+      <div className="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-yellow-400/20 blur-3xl"></div>
 
-          <div className="inline-flex items-center rounded-full border border-yellow-500 bg-yellow-50 px-5 py-2 text-sm font-semibold uppercase tracking-widest text-yellow-700">
-            Trusted Recruitment • Career Coaching • HR Consulting
-          </div>
+      <Container className="relative grid items-center gap-20 py-28 lg:grid-cols-2">
 
-          <h1 className="mt-8 text-6xl font-extrabold leading-tight text-gray-900">
-            Build
-            <span className="text-yellow-600"> Global Careers </span>
-            With Confidence.
-          </h1>
+        {/* LEFT SIDE */}
 
-          <p className="mt-8 max-w-xl text-xl leading-9 text-gray-600">
-            Peace Careers helps ambitious professionals secure better
-            opportunities while helping employers recruit exceptional talent
-            across international markets.
-          </p>
+        <FadeIn>
+          <div><object data="" type=""></object>
 
-          <div className="mt-10 flex flex-wrap gap-5">
-            <Button>
-              Find Talent
-            </Button>
-
-            <Button variant="secondary">
-              Grow My Career
-            </Button>
-          </div>
-
-          <div className="mt-14 flex flex-wrap gap-10">
-
-            <div>
-              <h2 className="text-4xl font-bold text-gray-900">500+</h2>
-              <p className="text-gray-500">
-                Professionals Supported
-              </p>
+            <div className="inline-flex items-center rounded-full border border-yellow-500 bg-yellow-50 px-5 py-2 text-sm font-semibold uppercase tracking-[0.25em] text-yellow-700">
+              Global Recruitment • Career Coaching • HR Consulting
             </div>
 
-            <div>
-              <h2 className="text-4xl font-bold text-gray-900">30+</h2>
-              <p className="text-gray-500">
-                Industries Served
-              </p>
+            <h1 className="mt-8 text-5xl font-extrabold leading-tight text-gray-900 md:text-6xl">
+
+              Helping Employers
+              <br />
+
+              <span className="text-yellow-600">
+                Hire Better.
+              </span>
+
+              <br />
+
+              Helping Professionals
+              <br />
+
+              <span className="text-yellow-600">
+                Get Hired.
+              </span>
+
+            </h1>
+
+            <p className="mt-8 max-w-2xl text-xl leading-9 text-gray-600">
+
+              Peace Careers delivers premium recruitment, executive search,
+              ATS resume writing, LinkedIn optimization, career coaching,
+              and HR consulting to help organizations build exceptional teams
+              while empowering professionals to achieve international success.
+
+            </p>
+
+            <div className="mt-10 flex flex-wrap gap-5">
+
+              <Button>
+                Hire Top Talent
+              </Button>
+
+              <Button variant="secondary">
+                Book Career Consultation
+              </Button>
+
             </div>
 
-            <div>
-              <h2 className="text-4xl font-bold text-gray-900">
-                Global
-              </h2>
-              <p className="text-gray-500">
-                International Clients
-              </p>
+            {/* TRUST BADGES */}
+
+            <div className="mt-12 grid grid-cols-1 gap-4 text-gray-700 sm:grid-cols-3">
+
+              <div className="rounded-xl bg-white p-4 shadow-sm border">
+                ✅ ATS Resume Experts
+              </div>
+
+              <div className="rounded-xl bg-white p-4 shadow-sm border">
+                ✅ Global Recruitment
+              </div>
+
+              <div className="rounded-xl bg-white p-4 shadow-sm border">
+                ✅ Career Coaching
+              </div>
+
             </div>
 
           </div>
+        </FadeIn>
 
-        </div>
+        {/* RIGHT SIDE */}
 
-        {/* RIGHT COLUMN */}
-        <div className="mt-20 lg:mt-0">
+        <FadeIn delay={0.2}>
 
           <div className="rounded-[40px] bg-gradient-to-br from-black via-gray-900 to-yellow-600 p-12 shadow-2xl">
 
             <div className="rounded-3xl bg-white p-10">
 
-              <p className="font-bold uppercase tracking-widest text-yellow-600">
+              <p className="font-bold uppercase tracking-[0.3em] text-yellow-600">
                 Peace Careers
               </p>
 
               <h2 className="mt-6 text-4xl font-bold text-gray-900">
-                Connecting People.
+                Your Career.
+                <br />
+                Our Expertise.
               </h2>
 
-              <p className="mt-5 leading-8 text-gray-600">
-                Recruitment.
-                <br />
-                Executive Search.
-                <br />
-                Career Coaching.
-                <br />
-                HR Consulting.
-              </p>
+              <div className="mt-8 space-y-5 text-gray-700">
+
+                <div>✓ Executive Recruitment</div>
+
+                <div>✓ ATS Resume Writing</div>
+
+                <div>✓ LinkedIn Optimization</div>
+
+                <div>✓ Career Coaching</div>
+
+                <div>✓ International Hiring</div>
+
+                <div>✓ HR Consulting</div>
+
+              </div>
 
               <div className="mt-10 rounded-2xl bg-black p-6 text-white">
 
-                <p className="text-lg font-semibold">
-                  Trusted by professionals seeking international
-                  opportunities.
+                <h3 className="text-lg font-bold">
+                  Our Mission
+                </h3>
+
+                <p className="mt-3 leading-7 text-gray-300">
+                  Helping organizations recruit exceptional talent while
+                  empowering professionals to build rewarding careers
+                  around the world.
                 </p>
 
               </div>
@@ -102,9 +135,10 @@ export default function Hero() {
 
           </div>
 
-        </div>
+        </FadeIn>
 
       </Container>
+
     </section>
   );
 }

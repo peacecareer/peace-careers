@@ -2,20 +2,7 @@ import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import FadeIn from "@/components/ui/FadeIn";
 
-const industries = [
-  "Technology",
-  "Banking & Finance",
-  "Healthcare",
-  "Engineering",
-  "Manufacturing",
-  "Energy",
-  "Construction",
-  "Telecommunications",
-  "Education",
-  "Hospitality",
-  "Retail & FMCG",
-  "Government",
-];
+import { industries } from "@/data/industries";
 
 export default function Industries() {
   return (
