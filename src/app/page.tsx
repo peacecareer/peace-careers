@@ -1,4 +1,4 @@
-import Navbar from "@/components/layout/Navbar";
+
 import Hero from "@/components/sections/Hero";
 import Services from "@/components/sections/Services";
 import WhyChoose from "@/components/sections/WhyChoose";
@@ -9,12 +9,10 @@ import Testimonials from "@/components/sections/Testimonials";
 import Companies from "@/components/sections/Companies";
 import FAQ from "@/components/sections/FAQ";
 import CTA from "@/components/sections/CTA";
-import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
     <>
-      <Navbar />
       <Hero />
       <Services />
       <WhyChoose />
@@ -25,7 +23,6 @@ export default function Home() {
       <Companies />
       <FAQ />
       <CTA />
-      <Footer />
     </>
   );
 }

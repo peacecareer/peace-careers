@@ -1,5 +1,4 @@
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
+
 
 import AboutHero from "@/components/sections/AboutHero";
 import Mission from "@/components/sections/Mission";
@@ -12,8 +11,6 @@ import CTA from "@/components/sections/CTA";
 export default function AboutPage() {
   return (
     <>
-      <Navbar />
-
       <main>
         <AboutHero />
         <Mission />
@@ -23,8 +20,6 @@ export default function AboutPage() {
             <Leadership />
             <CTA />
       </main>
-
-      <Footer />
     </>
   );
 }
