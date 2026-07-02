@@ -1,3 +1,4 @@
+import FadeIn from "@/components/ui/FadeIn";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 export default function Services() {
@@ -23,32 +24,38 @@ export default function Services() {
     <section className="bg-white py-24">
       <Container>
 
-        <SectionHeading
-  badge="Our Services"
-  title="Helping Employers and Professionals Succeed"
-  description="From executive recruitment to career coaching, we provide premium services designed to help organizations and professionals achieve long-term success."
-/>
+       <FadeIn>
+  <SectionHeading
+    badge="Our Services"
+    title="Helping Employers and Professionals Succeed"
+    description="From executive recruitment to career coaching, we provide premium services designed to help organizations and professionals achieve long-term success."
+  />
+</FadeIn>
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
 
-          {services.map((service) => (
-            <div
-              key={service.title}
-              className="rounded-3xl border border-gray-200 p-10 shadow-sm hover:shadow-xl transition duration-300"
-            >
-              <h3 className="text-2xl font-bold mb-5">
-                {service.title}
-              </h3>
+          {services.map((service, index) => (
+  <FadeIn
+    key={service.title}
+    delay={index * 0.15}
+  >
+    <div
+      className="rounded-3xl border border-gray-200 p-10 shadow-sm hover:shadow-xl transition duration-300"
+    >
+      <h3 className="text-2xl font-bold mb-5">
+        {service.title}
+      </h3>
 
-              <p className="text-gray-600 leading-8">
-                {service.description}
-              </p>
+      <p className="text-gray-600 leading-8">
+        {service.description}
+      </p>
 
-              <button className="mt-8 text-yellow-600 font-semibold">
-                Learn More →
-              </button>
-            </div>
-          ))}
+      <button className="mt-8 text-yellow-600 font-semibold">
+        Learn More →
+      </button>
+    </div>
+  </FadeIn>
+))}
 
         </div>
 

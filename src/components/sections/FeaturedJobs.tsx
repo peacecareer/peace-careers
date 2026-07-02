@@ -1,3 +1,4 @@
+import Badge from "@/components/ui/Badge";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 
@@ -88,13 +89,13 @@ export default function FeaturedJobs() {
 
               <div className="mt-6 flex gap-3 flex-wrap">
 
-                <span className="rounded-full bg-gray-100 px-4 py-2 text-sm">
-                  {job.type}
-                </span>
+                <Badge color="gray">
+  {job.type}
+</Badge>
 
-                <span className="rounded-full bg-yellow-100 px-4 py-2 text-sm text-yellow-700">
-                  {job.remote}
-                </span>
+<Badge>
+  {job.remote}
+</Badge>
 
               </div>
 
