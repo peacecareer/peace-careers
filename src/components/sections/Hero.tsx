@@ -52,13 +52,16 @@ export default function Hero() {
 
             <div className="mt-10 flex flex-wrap gap-5">
 
-              <Button>
-                Hire Top Talent
-              </Button>
+              <Button href="/employers">
+  Hire Top Talent
+</Button>
 
-              <Button variant="secondary">
-                Book Career Consultation
-              </Button>
+<Button
+  href="/contact"
+  variant="secondary"
+>
+  Book Career Consultation
+</Button>
 
             </div>
 
