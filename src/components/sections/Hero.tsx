@@ -87,55 +87,55 @@ export default function Hero() {
 
         <FadeIn delay={0.2}>
 
-          <div className="rounded-[40px] bg-gradient-to-br from-black via-gray-900 to-yellow-600 p-12 shadow-2xl">
+  <div className="relative">
 
-            <div className="rounded-3xl bg-white p-10">
+    <img
+  src="/images/hero.jpg"
+  alt="Peace Careers"
+  className="h-[700px] w-full rounded-[40px] object-cover shadow-2xl"
+/>
 
-              <p className="font-bold uppercase tracking-[0.3em] text-yellow-600">
-                Peace Careers
-              </p>
+    {/* Floating Card */}
 
-              <h2 className="mt-6 text-4xl font-bold text-gray-900">
-                Your Career.
-                <br />
-                Our Expertise.
-              </h2>
+    <div className="absolute left-6 top-8 rounded-3xl bg-white/90 p-6 shadow-2xl backdrop-blur">
 
-              <div className="mt-8 space-y-5 text-gray-700">
+      <p className="text-sm font-semibold uppercase tracking-widest text-yellow-600">
+        Trusted Worldwide
+      </p>
 
-                <div>✓ Executive Recruitment</div>
+      <h3 className="mt-2 text-3xl font-bold">
+        500+
+      </h3>
 
-                <div>✓ ATS Resume Writing</div>
+      <p className="text-gray-600">
+        Professionals Supported
+      </p>
 
-                <div>✓ LinkedIn Optimization</div>
+    </div>
 
-                <div>✓ Career Coaching</div>
+    {/* Floating Card */}
 
-                <div>✓ International Hiring</div>
+    <div className="absolute bottom-8 right-6 rounded-3xl bg-black p-6 text-white shadow-2xl">
 
-                <div>✓ HR Consulting</div>
+      <div className="text-yellow-400">
+        ★★★★★
+      </div>
 
-              </div>
+      <h3 className="mt-3 text-xl font-bold">
+        Premium Career Services
+      </h3>
 
-              <div className="mt-10 rounded-2xl bg-black p-6 text-white">
+      <p className="mt-2 text-gray-300">
+        ATS Resume Writing<br />
+        Executive Recruitment<br />
+        Career Coaching
+      </p>
 
-                <h3 className="text-lg font-bold">
-                  Our Mission
-                </h3>
+    </div>
 
-                <p className="mt-3 leading-7 text-gray-300">
-                  Helping organizations recruit exceptional talent while
-                  empowering professionals to build rewarding careers
-                  around the world.
-                </p>
+  </div>
 
-              </div>
-
-            </div>
-
-          </div>
-
-        </FadeIn>
+</FadeIn>
 
       </Container>
 

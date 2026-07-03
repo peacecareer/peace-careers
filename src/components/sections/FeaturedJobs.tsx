@@ -1,115 +1,78 @@
-import Badge from "@/components/ui/Badge";
-import Card from "@/components/ui/Card";
-import Button from "@/components/ui/Button";
+import Container from "@/components/ui/Container";
+import SectionHeading from "@/components/ui/SectionHeading";
+import FadeIn from "@/components/ui/FadeIn";
+
+const jobs = [
+  {
+    title: "Senior Software Engineer",
+    location: "Remote",
+    type: "Full-Time",
+  },
+  {
+    title: "HR Business Partner",
+    location: "United Kingdom",
+    type: "Full-Time",
+  },
+  {
+    title: "Project Manager",
+    location: "Canada",
+    type: "Hybrid",
+  },
+  {
+    title: "Financial Analyst",
+    location: "United States",
+    type: "Remote",
+  },
+];
 
 export default function FeaturedJobs() {
-  const jobs = [
-    {
-      title: "Senior Product Manager",
-      location: "Toronto, Canada",
-      salary: "$120k - $150k",
-      type: "Full-Time",
-      remote: "Hybrid",
-    },
-    {
-      title: "Software Engineer",
-      location: "Berlin, Germany",
-      salary: "$95k - $135k",
-      type: "Full-Time",
-      remote: "Remote",
-    },
-    {
-      title: "Financial Analyst",
-      location: "London, UK",
-      salary: "$80k - $110k",
-      type: "Full-Time",
-      remote: "On-site",
-    },
-    {
-      title: "HR Business Partner",
-      location: "Dubai, UAE",
-      salary: "$90k - $120k",
-      type: "Full-Time",
-      remote: "Hybrid",
-    },
-    {
-      title: "Project Manager",
-      location: "New York, USA",
-      salary: "$110k - $145k",
-      type: "Full-Time",
-      remote: "Remote",
-    },
-    {
-      title: "Data Scientist",
-      location: "Amsterdam, Netherlands",
-      salary: "$130k - $170k",
-      type: "Full-Time",
-      remote: "Hybrid",
-    },
-  ];
-
   return (
-    <section className="bg-white py-28">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="bg-white py-24">
+      <Container>
 
-        <div className="text-center">
+        <FadeIn>
+          <SectionHeading
+            badge="Featured Jobs"
+            title="Explore Exciting Career Opportunities"
+            description="Discover premium opportunities with employers hiring across international markets."
+          />
+        </FadeIn>
 
-          <p className="uppercase tracking-[0.35em] font-bold text-yellow-600">
-            Featured Opportunities
-          </p>
-
-          <h2 className="mt-5 text-5xl font-extrabold text-gray-900">
-            Discover Your Next Career Move
-          </h2>
-
-          <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-600 leading-8">
-            Browse a selection of premium international opportunities across
-            multiple industries.
-          </p>
-
-        </div>
-
-        <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 grid gap-8 lg:grid-cols-2">
 
           {jobs.map((job, index) => (
+            <FadeIn key={job.title} delay={index * 0.1}>
 
-            <Card key={index}>
+              <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-yellow-500 hover:shadow-xl">
 
-              <h3 className="text-2xl font-bold text-gray-900">
-                {job.title}
-              </h3>
+                <div className="flex items-center justify-between">
 
-              <p className="mt-4 text-gray-600">
-                📍 {job.location}
-              </p>
+                  <h3 className="text-2xl font-bold">
+                    {job.title}
+                  </h3>
 
-              <p className="mt-2 font-semibold text-yellow-600">
-                {job.salary}
-              </p>
+                  <span className="rounded-full bg-yellow-100 px-4 py-2 text-sm font-semibold text-yellow-700">
+                    {job.type}
+                  </span>
 
-              <div className="mt-6 flex gap-3 flex-wrap">
+                </div>
 
-                <Badge color="gray">
-  {job.type}
-</Badge>
+                <p className="mt-5 text-gray-600">
+                  📍 {job.location}
+                </p>
 
-<Badge>
-  {job.remote}
-</Badge>
+                <button className="mt-8 rounded-xl bg-black px-6 py-3 font-semibold text-white transition hover:bg-yellow-600">
+                  Apply Now
+                </button>
 
               </div>
 
-              <div className="mt-8">
-                <Button>Apply Now</Button>
-              </div>
-
-            </Card>
-
+            </FadeIn>
           ))}
 
         </div>
 
-      </div>
+      </Container>
     </section>
   );
 }

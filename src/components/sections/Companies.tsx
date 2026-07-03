@@ -1,54 +1,47 @@
 import Image from "next/image";
 import Container from "@/components/ui/Container";
+import SectionHeading from "@/components/ui/SectionHeading";
+import FadeIn from "@/components/ui/FadeIn";
+
+const companies = [
+  "/logos/googlee.jpg",
+  "/logos/microsoftt.jpg",
+  "/logos/amazon.png",
+  "/logos/meta.png",
+  "/logos/teslaa.jpg",
+];
 
 export default function Companies() {
-  const companies = [
-    { name: "Google", logo: "/logos/google.jpg" },
-    { name: "Microsoft", logo: "/logos/microsoft.jpg" },
-    { name: "Amazon", logo: "/logos/amazon.png" },
-    { name: "Meta", logo: "/logos/meta.png" },
-    { name: "Tesla", logo: "/logos/tesla.jpg" },
-    { name: "Deloitte", logo: "/logos/deloitte.png" },
-    { name: "PwC", logo: "/logos/pwc.png" },
-    { name: "KPMG", logo: "/logos/kpmg.png" },
-  ];
-
   return (
-    <section className="border-y border-gray-200 bg-white py-24">
+    <section className="bg-stone-50 py-24">
       <Container>
 
-        <p className="text-center uppercase tracking-[0.35em] font-bold text-yellow-600">
-          Trusted By
-        </p>
+        <FadeIn>
+          <SectionHeading
+            badge="Trusted Brands"
+            title="Professionals Working With Global Companies"
+            description="Our clients and candidates have pursued opportunities with some of the world's leading organizations."
+          />
+        </FadeIn>
 
-        <h2 className="mt-5 text-center text-5xl font-extrabold text-gray-900">
-          Companies We Recruit For
-        </h2>
+        <div className="mt-16 grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5">
 
-        <p className="mx-auto mt-6 max-w-3xl text-center text-lg leading-8 text-gray-600">
-          Our recruitment specialists help professionals connect with some of
-          the world's most respected organizations.
-        </p>
+          {companies.map((logo, index) => (
+            <FadeIn key={logo} delay={index * 0.1}>
 
-        <div className="mt-16 grid grid-cols-2 gap-8 md:grid-cols-4">
+              <div className="flex h-36 items-center justify-center rounded-3xl border border-gray-200 bg-white shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl">
 
-          {companies.map((company) => (
+                <Image
+                  src={logo}
+                  alt="Company Logo"
+                  width={140}
+                  height={70}
+                  className="object-contain"
+                />
 
-            <div
-              key={company.name}
-              className="flex h-32 items-center justify-center rounded-3xl border border-gray-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-yellow-500 hover:shadow-xl"
-            >
+              </div>
 
-              <Image
-                src={company.logo}
-                alt={company.name}
-                width={150}
-                height={60}
-                className="h-12 w-auto object-contain"
-              />
-
-            </div>
-
+            </FadeIn>
           ))}
 
         </div>
