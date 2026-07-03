@@ -1,42 +1,57 @@
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
+import FadeIn from "@/components/ui/FadeIn";
 
 export default function CTA() {
   return (
-    <section className="bg-gradient-to-r from-black via-gray-900 to-yellow-600 py-28">
+    <section className="relative overflow-hidden bg-gradient-to-r from-black via-gray-900 to-yellow-700 py-28 text-white">
+
       <Container>
 
-        <div className="mx-auto max-w-5xl text-center">
+        <FadeIn>
 
-          <p className="uppercase tracking-[0.35em] font-bold text-yellow-300">
-            Ready To Get Started?
-          </p>
+          <div className="mx-auto max-w-4xl text-center">
 
-          <h2 className="mt-6 text-5xl font-extrabold leading-tight text-white">
-            Build Your Global Career Or Hire Exceptional Talent Today
-          </h2>
+            <p className="font-semibold uppercase tracking-[0.35em] text-yellow-400">
+              Ready To Take The Next Step?
+            </p>
 
-          <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-gray-200">
-            Whether you're searching for your next opportunity or looking to
-            recruit outstanding professionals, Peace Careers is ready to help
-            you succeed.
-          </p>
+            <h2 className="mt-6 text-5xl font-extrabold leading-tight">
 
-          <div className="mt-12 flex flex-wrap justify-center gap-6">
+              Whether You're Hiring
+              <br />
+              Or Looking For Your Next Opportunity,
+              <br />
+              We're Ready To Help.
 
-            <Button>
-              Book Consultation
-            </Button>
+            </h2>
 
-            <Button variant="secondary">
-              Contact Us
-            </Button>
+            <p className="mx-auto mt-8 max-w-3xl text-xl leading-9 text-gray-300">
+
+              Partner with Peace Careers for premium recruitment,
+              executive search, ATS resume writing, LinkedIn optimization,
+              career coaching, and HR consulting.
+
+            </p>
+
+            <div className="mt-12 flex flex-wrap justify-center gap-6">
+
+              <Button>
+                Hire Top Talent
+              </Button>
+
+              <Button variant="secondary">
+                Book Career Consultation
+              </Button>
+
+            </div>
 
           </div>
 
-        </div>
+        </FadeIn>
 
       </Container>
+
     </section>
   );
 }
