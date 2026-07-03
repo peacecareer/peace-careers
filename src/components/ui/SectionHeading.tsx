@@ -2,32 +2,28 @@ type SectionHeadingProps = {
   badge: string;
   title: string;
   description: string;
-  centered?: boolean;
 };
 
 export default function SectionHeading({
   badge,
   title,
   description,
-  centered = true,
 }: SectionHeadingProps) {
   return (
-    <div
-      className={`mb-16 ${
-        centered ? "text-center mx-auto max-w-3xl" : ""
-      }`}
-    >
-      <p className="uppercase tracking-[0.35em] font-bold text-yellow-600">
-        {badge}
-      </p>
+    <div className="mx-auto max-w-4xl text-center">
 
-      <h2 className="mt-5 text-5xl font-extrabold text-gray-900 leading-tight">
+      <span className="inline-flex rounded-full border border-yellow-500 bg-yellow-50 px-5 py-2 text-sm font-semibold uppercase tracking-[0.3em] text-yellow-700">
+        {badge}
+      </span>
+
+      <h2 className="mt-8 text-4xl font-extrabold leading-tight text-gray-900 md:text-5xl">
         {title}
       </h2>
 
-      <p className="mt-6 text-lg leading-8 text-gray-600">
+      <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-600">
         {description}
       </p>
+
     </div>
   );
 }
