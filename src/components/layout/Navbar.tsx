@@ -1,64 +1,61 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import Button from "@/components/ui/Button";
+
+const links = [
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Services", href: "/services" },
+  { name: "Employers", href: "/employers" },
+  { name: "Job Seekers", href: "/job-seekers" },
+  { name: "Resources", href: "/resources" },
+  { name: "Contact", href: "/contact" },
+];
+
 export default function Navbar() {
-  const links = [
-    "Home",
-    "About",
-    "Services",
-    "Employers",
-    "Job Seekers",
-    "Resources",
-    "Contact",
-  ];
+  const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-gray-200/70 bg-white/90 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-white/90 backdrop-blur-xl">
 
-        {/* Logo */}
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
 
-        <a href="#" className="flex items-center gap-3">
-
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-black text-xl font-bold text-yellow-500 shadow-lg">
-P
-</div>
-
-          <div>
-
-            <h1 className="text-3xl font-black tracking-tight">
-              Peace
-              <span className="text-yellow-600"> Careers</span>
-            </h1>
-
-            <p className="text-xs uppercase tracking-[0.4em] text-yellow-600">
-              Global Recruitment
-            </p>
-
-          </div>
-
-        </a>
-
-        {/* Navigation */}
+        <Link
+          href="/"
+          className="text-3xl font-extrabold tracking-tight"
+        >
+          Peace
+          <span className="text-yellow-600"> Careers</span>
+        </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">
 
           {links.map((link) => (
-            <a
-              key={link}
-              href="#"
-              className="font-medium text-gray-700 transition hover:text-yellow-600"
+
+            <Link
+              key={link.name}
+              href={link.href}
+              className={`transition hover:text-yellow-600 ${
+                pathname === link.href
+                  ? "font-bold text-yellow-600"
+                  : "text-gray-700"
+              }`}
             >
-              {link}
-            </a>
+              {link.name}
+            </Link>
+
           ))}
 
         </nav>
 
-        {/* CTA */}
-
-        <button className="rounded-xl bg-black px-6 py-3 font-semibold text-white transition duration-300 hover:bg-yellow-500 hover:text-black">
+        <Button>
           Book Consultation
-        </button>
+        </Button>
 
       </div>
+
     </header>
   );
 }
