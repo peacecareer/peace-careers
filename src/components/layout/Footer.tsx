@@ -5,47 +5,53 @@ export default function Footer() {
   return (
     <footer className="bg-black text-gray-300">
 
-      <Container className="py-20">
+      <Container className="py-24">
 
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
-
-          {/* Company */}
+        <div className="grid gap-16 lg:grid-cols-4">
 
           <div>
 
-            <h2 className="text-3xl font-extrabold text-white">
+            <h2 className="text-4xl font-extrabold text-white">
               Peace
               <span className="text-yellow-500"> Careers</span>
             </h2>
 
             <p className="mt-6 leading-8">
-              Helping employers recruit exceptional talent while empowering
+              Helping employers hire exceptional talent while empowering
               professionals to build successful international careers.
             </p>
 
-          </div>
+            <div className="mt-8 flex gap-3">
 
-          {/* Quick Links */}
+              <div className="rounded-xl bg-yellow-500 px-4 py-2 font-bold text-black">
+                Recruitment
+              </div>
+
+              <div className="rounded-xl bg-white/10 px-4 py-2">
+                Career Coaching
+              </div>
+
+            </div>
+
+          </div>
 
           <div>
 
             <h3 className="text-xl font-bold text-white">
-              Quick Links
+              Company
             </h3>
 
-            <ul className="mt-6 space-y-3">
+            <ul className="mt-6 space-y-4">
 
               <li><Link href="/">Home</Link></li>
               <li><Link href="/about">About</Link></li>
               <li><Link href="/services">Services</Link></li>
-              <li><Link href="/employers">Employers</Link></li>
-              <li><Link href="/job-seekers">Job Seekers</Link></li>
+              <li><Link href="/resources">Resources</Link></li>
+              <li><Link href="/contact">Contact</Link></li>
 
             </ul>
 
           </div>
-
-          {/* Services */}
 
           <div>
 
@@ -53,19 +59,17 @@ export default function Footer() {
               Services
             </h3>
 
-            <ul className="mt-6 space-y-3">
+            <ul className="mt-6 space-y-4">
 
               <li>Executive Recruitment</li>
-              <li>Career Coaching</li>
-              <li>Resume Writing</li>
-              <li>HR Consulting</li>
+              <li>ATS Resume Writing</li>
               <li>LinkedIn Optimization</li>
+              <li>Career Coaching</li>
+              <li>HR Consulting</li>
 
             </ul>
 
           </div>
-
-          {/* Contact */}
 
           <div>
 
@@ -76,18 +80,9 @@ export default function Footer() {
             <ul className="mt-6 space-y-4">
 
               <li>📧 info@peacecareers.com</li>
-
               <li>📞 +234 XXX XXX XXXX</li>
-
-              <li>
-                Lagos, Nigeria
-              </li>
-
-              <li>
-                Mon – Fri
-                <br />
-                9:00 AM – 6:00 PM
-              </li>
+              <li>Lagos, Nigeria</li>
+              <li>Mon – Fri | 9AM – 6PM</li>
 
             </ul>
 
@@ -97,7 +92,7 @@ export default function Footer() {
 
       </Container>
 
-      <div className="border-t border-gray-800">
+      <div className="border-t border-white/10">
 
         <Container className="flex flex-col items-center justify-between gap-4 py-8 md:flex-row">
 
@@ -105,14 +100,14 @@ export default function Footer() {
             © 2026 Peace Careers. All rights reserved.
           </p>
 
-          <div className="flex gap-6 text-sm">
+          <div className="flex gap-6">
 
-            <Link href="/">
+            <Link href="/privacy">
               Privacy Policy
             </Link>
 
-            <Link href="/">
-              Terms
+            <Link href="/terms">
+              Terms & Conditions
             </Link>
 
           </div>
