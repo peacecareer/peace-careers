@@ -1,85 +1,77 @@
+import Container from "@/components/ui/Container";
+import SectionHeading from "@/components/ui/SectionHeading";
+import FadeIn from "@/components/ui/FadeIn";
 import {
-  ShieldCheck,
+  Award,
   Globe,
   Users,
-  Award,
+  ShieldCheck,
 } from "lucide-react";
-
-import Container from "@/components/ui/Container";
-import FadeIn from "@/components/ui/FadeIn";
-import SectionHeading from "@/components/ui/SectionHeading";
 
 const features = [
   {
-    title: "Trusted Expertise",
+    icon: Award,
+    title: "Industry Expertise",
     description:
-      "Our experienced recruitment and career consultants deliver professional guidance tailored to every client.",
-    icon: ShieldCheck,
+      "Experienced recruitment and career specialists delivering premium talent solutions.",
   },
   {
+    icon: Globe,
     title: "Global Opportunities",
     description:
-      "We connect professionals with international career opportunities and help organizations hire worldwide.",
-    icon: Globe,
+      "Connecting professionals and employers across international markets.",
   },
   {
-    title: "Personalized Service",
-    description:
-      "Every employer and job seeker receives customized solutions designed around their unique goals.",
     icon: Users,
+    title: "Personalized Support",
+    description:
+      "Every client receives tailored recruitment and career guidance.",
   },
   {
-    title: "Commitment to Excellence",
+    icon: ShieldCheck,
+    title: "Trusted Process",
     description:
-      "We focus on quality, integrity, and long-term relationships that create lasting success.",
-    icon: Award,
+      "Transparent, professional, and results-driven recruitment methodology.",
   },
 ];
 
 export default function WhyChoose() {
   return (
-    <section className="bg-stone-50 py-28">
+    <section className="bg-stone-50 py-24">
       <Container>
 
         <FadeIn>
           <SectionHeading
-            badge="Why Choose Us"
+            badge="Why Choose Peace Careers"
             title="Your Trusted Recruitment & Career Partner"
-            description="We combine industry expertise, personalized service, and global opportunities to help employers build exceptional teams and professionals achieve outstanding careers."
+            description="We combine recruitment expertise, career coaching, and HR consulting to deliver outstanding results for employers and professionals."
           />
         </FadeIn>
 
-        <div className="mt-20 grid gap-8 md:grid-cols-2">
+        <div className="mt-16 grid gap-8 md:grid-cols-2">
 
           {features.map((feature, index) => {
             const Icon = feature.icon;
 
             return (
-              <FadeIn
-                key={feature.title}
-                delay={index * 0.15}
-              >
-                <div className="group rounded-3xl border border-gray-200 bg-white p-10 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-yellow-500 hover:shadow-xl">
+              <FadeIn key={feature.title} delay={index * 0.15}>
 
-                  <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-yellow-100 text-yellow-600 transition group-hover:bg-yellow-500 group-hover:text-white">
+                <div className="rounded-3xl bg-white p-10 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
 
-                    <Icon size={32} />
-
+                  <div className="mb-6 inline-flex rounded-2xl bg-yellow-100 p-4">
+                    <Icon className="h-8 w-8 text-yellow-600" />
                   </div>
 
-                  <h3 className="text-2xl font-bold text-gray-900">
-
+                  <h3 className="text-2xl font-bold">
                     {feature.title}
-
                   </h3>
 
                   <p className="mt-5 leading-8 text-gray-600">
-
                     {feature.description}
-
                   </p>
 
                 </div>
+
               </FadeIn>
             );
           })}
