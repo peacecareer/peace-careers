@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 import FadeIn from "@/components/ui/FadeIn";
 import Button from "@/components/ui/Button";
@@ -13,19 +14,18 @@ export default function Leadership() {
 
           <FadeIn>
 
-            <div className="flex aspect-square items-center justify-center rounded-[40px] bg-gradient-to-br from-black via-gray-900 to-yellow-600 p-8">
+            <div className="overflow-hidden rounded-[40px] shadow-2xl">
 
-              <div className="flex h-full w-full items-center justify-center rounded-3xl bg-white">
+  <Image
+    src="/images/peace.png"
+    alt="Peace Olulakin"
+    width={700}
+    height={850}
+    className="h-full w-full object-cover"
+    priority
+  />
 
-                <span className="text-center text-xl font-bold text-gray-400">
-                  Founder Portrait
-                  <br />
-                  (Coming Soon)
-                </span>
-
-              </div>
-
-            </div>
+</div>
 
           </FadeIn>
 
@@ -55,6 +55,16 @@ export default function Leadership() {
                 partnerships that create measurable impact.
               </p>
 
+              <div className="mt-8 border-l-4 border-yellow-500 pl-6">
+  <h3 className="text-2xl font-bold text-gray-900">
+    Peace Olulakin
+  </h3>
+
+  <p className="mt-1 text-lg font-medium text-yellow-600">
+    Founder & CEO, Peace Careers
+  </p>
+</div>
+
               <div className="mt-10 rounded-3xl border border-yellow-300 bg-yellow-50 p-8">
 
                 <h3 className="text-2xl font-bold text-gray-900">
@@ -62,8 +72,7 @@ export default function Leadership() {
                 </h3>
 
                 <p className="mt-4 leading-8 text-gray-700">
-                  "Success comes from creating opportunities, building trust,
-                  and helping people reach their full potential."
+                  "Our mission is to connect exceptional talent with outstanding opportunities while helping professionals build meaningful, lasting careers."
                 </p>
 
               </div>

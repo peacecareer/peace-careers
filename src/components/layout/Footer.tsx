@@ -17,8 +17,7 @@ export default function Footer() {
             </h2>
 
             <p className="mt-6 leading-8">
-              Helping employers hire exceptional talent while empowering
-              professionals to build successful international careers.
+              Connecting exceptional talent with outstanding opportunities through recruitment, executive search, ATS resume writing, career coaching, and HR consulting.
             </p>
 
             <div className="mt-8 flex gap-3">
@@ -74,17 +73,20 @@ export default function Footer() {
           <div>
 
             <h3 className="text-xl font-bold text-white">
-              Contact
-            </h3>
+  Contact
+</h3>
 
-            <ul className="mt-6 space-y-4">
+<ul className="mt-6 space-y-4">
 
-              <li>📧 info@peacecareers.com</li>
-              <li>📞 +234 XXX XXX XXXX</li>
-              <li>Lagos, Nigeria</li>
-              <li>Mon – Fri | 9AM – 6PM</li>
+  <li>📧 peace@peacecareers.com</li>
 
-            </ul>
+  <li>📞 +234 810 899 4952</li>
+
+  <li>📍 Lagos, Nigeria</li>
+
+  <li>🕒 Mon – Sat | 9:00 AM – 6:00 PM</li>
+
+</ul>
 
           </div>
 
@@ -97,7 +99,7 @@ export default function Footer() {
         <Container className="flex flex-col items-center justify-between gap-4 py-8 md:flex-row">
 
           <p className="text-sm">
-            © 2026 Peace Careers. All rights reserved.
+            © {new Date().getFullYear()} Peace Careers. All rights reserved.
           </p>
 
           <div className="flex gap-6">

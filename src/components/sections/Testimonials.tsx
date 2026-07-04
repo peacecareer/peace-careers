@@ -4,27 +4,29 @@ import FadeIn from "@/components/ui/FadeIn";
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
-    role: "Senior Project Manager",
-    company: "Technology Industry",
+    name: "Resume Writing Client",
+    role: "Career Transition",
+    company: "Verified Client",
     quote:
-      "Peace Careers completely transformed my resume and LinkedIn profile. Within weeks, I secured interviews with international employers.",
+      "The ATS resume was professionally written, easy to read, and significantly improved my confidence during my job search.",
   },
   {
-    name: "David Williams",
-    role: "HR Director",
-    company: "Manufacturing Company",
+    name: "Recruitment Client",
+    role: "Hiring Manager",
+    company: "Verified Client",
     quote:
-      "Their recruitment process was professional, efficient, and delivered exceptional candidates for our leadership positions.",
+      "The recruitment process was organized, responsive, and focused on finding candidates that matched our requirements.",
   },
   {
-    name: "Amina Yusuf",
-    role: "Finance Professional",
-    company: "Financial Services",
+    name: "Career Coaching Client",
+    role: "Job Seeker",
+    company: "Verified Client",
     quote:
-      "The career coaching and ATS resume service helped me secure an opportunity I had been pursuing for years.",
+      "The career coaching sessions helped me improve my interview preparation, personal branding, and overall job search strategy.",
   },
 ];
+
+
 
 export default function Testimonials() {
   return (

@@ -1,15 +1,29 @@
 export const theme = {
   colors: {
-    primary: "#d4a017",
-    secondary: "#111827",
-    background: "#faf9f6",
+    primary: "#C9A227",
+    primaryDark: "#A8841D",
+
+    black: "#0B0B0B",
+    charcoal: "#1F2937",
+
+    white: "#FFFFFF",
+    ivory: "#FAF8F3",
+
+    gray100: "#F8F8F8",
+    gray200: "#ECECEC",
+    gray600: "#6B7280",
   },
 
   radius: {
-    card: "1.5rem",
+    card: "32px",
+    button: "18px",
   },
 
-  spacing: {
-    section: "py-24",
+  shadow: {
+    card:
+      "0 20px 45px rgba(0,0,0,.08)",
+
+    hover:
+      "0 30px 60px rgba(0,0,0,.12)",
   },
 };

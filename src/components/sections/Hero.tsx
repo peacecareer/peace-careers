@@ -10,12 +10,12 @@ export default function Hero() {
       <div className="absolute -left-32 top-0 h-96 w-96 rounded-full bg-yellow-200/20 blur-3xl"></div>
       <div className="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-yellow-400/20 blur-3xl"></div>
 
-      <Container className="relative grid items-center gap-20 py-28 lg:grid-cols-2">
+      <Container className="relative grid items-center gap-10 pt-6 pb-16 lg:grid-cols-2">
 
         {/* LEFT SIDE */}
 
         <FadeIn>
-          <div><object data="" type=""></object>
+          <div>
 
             <div className="inline-flex items-center rounded-full border border-yellow-500 bg-yellow-50 px-5 py-2 text-sm font-semibold uppercase tracking-[0.25em] text-yellow-700">
               Global Recruitment • Career Coaching • HR Consulting
@@ -23,25 +23,25 @@ export default function Hero() {
 
             <h1 className="mt-8 text-5xl font-extrabold leading-tight text-gray-900 md:text-6xl">
 
-              Helping Employers
+              Building
               <br />
 
               <span className="text-yellow-600">
-                Hire Better.
+                Global Careers.
               </span>
 
               <br />
 
-              Helping Professionals
+              Hiring
               <br />
 
               <span className="text-yellow-600">
-                Get Hired.
+                Exceptional Talent.
               </span>
 
             </h1>
 
-            <p className="mt-8 max-w-2xl text-xl leading-9 text-gray-600">
+            <p className="mt-8 max-w-xl text-xl leading-9 text-gray-600">
 
               Peace Careers delivers premium recruitment, executive search,
               ATS resume writing, LinkedIn optimization, career coaching,
@@ -50,38 +50,71 @@ export default function Hero() {
 
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-5">
+            <div className="mt-12 flex flex-wrap gap-5">
 
               <Button href="/employers">
   Hire Top Talent
 </Button>
 
-<Button
-  href="/contact"
-  variant="secondary"
->
-  Book Career Consultation
+<Button href="/contact">
+  Book Consultation
 </Button>
 
             </div>
 
-            {/* TRUST BADGES */}
+           {/* PREMIUM SERVICE CARDS */}
 
-            <div className="mt-12 grid grid-cols-1 gap-4 text-gray-700 sm:grid-cols-3">
+<div className="mt-14 grid gap-6 sm:grid-cols-3">
 
-              <div className="rounded-xl bg-white p-4 shadow-sm border">
-                ✅ ATS Resume Experts
-              </div>
+  <div className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-md transition-all duration-300 hover:-translate-y-2 hover:border-yellow-500 hover:shadow-xl">
 
-              <div className="rounded-xl bg-white p-4 shadow-sm border">
-                ✅ Global Recruitment
-              </div>
+    <div className="mb-5 flex h-14 w-16 items-center justify-center rounded-2xl bg-yellow-100 text-3xl">
+      📄
+    </div>
 
-              <div className="rounded-xl bg-white p-4 shadow-sm border">
-                ✅ Career Coaching
-              </div>
+    <h3 className="text-lg font-bold text-gray-900">
+      ATS Resume Writing
+    </h3>
 
-            </div>
+    <p className="mt-3 text-sm leading-7 text-gray-600">
+      Professionally written resumes designed to pass Applicant Tracking Systems.
+    </p>
+
+  </div>
+
+  <div className="group rounded-2xl border border-gray-200 bg-white p-8 shadow-md transition-all duration-300 hover:-translate-y-2 hover:border-yellow-500 hover:shadow-xl">
+
+    <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-yellow-100 text-3xl">
+      🌍
+    </div>
+
+    <h3 className="text-lg font-bold text-gray-900">
+      Global Recruitment
+    </h3>
+
+    <p className="mt-3 text-sm leading-7 text-gray-600">
+      Connecting employers with exceptional professionals across international markets.
+    </p>
+
+  </div>
+
+  <div className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-md transition-all duration-300 hover:-translate-y-2 hover:border-yellow-500 hover:shadow-xl">
+
+    <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-yellow-100 text-3xl">
+      🎯
+    </div>
+
+    <h3 className="text-lg font-bold text-gray-900">
+      Career Coaching
+    </h3>
+
+    <p className="mt-3 text-sm leading-7 text-gray-600">
+      Personalized coaching that helps professionals secure better career opportunities.
+    </p>
+
+  </div>
+
+</div>
 
           </div>
         </FadeIn>
@@ -95,7 +128,7 @@ export default function Hero() {
     <img
   src="/images/hero.jpg"
   alt="Peace Careers"
-  className="h-[700px] w-full rounded-[40px] object-cover shadow-2xl"
+  className="h-[620px] w-full rounded-[40px] object-cover shadow-2xl"
 />
 
     {/* Floating Card */}

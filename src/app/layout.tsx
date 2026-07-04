@@ -10,9 +10,42 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Peace Careers",
+  title: {
+    default: "Peace Careers | Global Recruitment & Career Coaching",
+    template: "%s | Peace Careers",
+  },
+
   description:
-    "Global Recruitment, Career Coaching and HR Consulting.",
+    "Peace Careers helps employers recruit exceptional talent and empowers professionals through ATS resume writing, LinkedIn optimization, executive recruitment, HR consulting, and career coaching.",
+
+  keywords: [
+    "Recruitment Agency",
+    "Executive Recruitment",
+    "Career Coaching",
+    "ATS Resume Writing",
+    "LinkedIn Optimization",
+    "HR Consulting",
+    "Global Recruitment",
+    "Resume Writer",
+    "Interview Coaching",
+    "Job Search",
+  ],
+
+  authors: [
+    {
+      name: "Peace Careers",
+    },
+  ],
+
+  creator: "Peace Careers",
+
+  openGraph: {
+    title: "Peace Careers",
+    description:
+      "Global Recruitment, Career Coaching & HR Consulting.",
+    siteName: "Peace Careers",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -23,14 +56,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={jakarta.className}>
-
-  <Navbar />
-
-  {children}
-
-  <Footer />
-
-</body>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
