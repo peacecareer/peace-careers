@@ -78,7 +78,7 @@ export default function Footer() {
 
 <ul className="mt-6 space-y-4">
 
-  <li>📧 peace@peacecareers.com</li>
+  <li>📧 info@peacecareersglobal.com</li>
 
   <li>📞 +1 (581) 895 - 4725 </li>
 
