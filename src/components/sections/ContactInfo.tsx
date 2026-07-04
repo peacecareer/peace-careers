@@ -24,7 +24,7 @@ export default function ContactInfo() {
             <Mail className="mb-5 h-10 w-10 text-yellow-600" />
             <h3 className="text-xl font-bold">Email</h3>
             <p className="mt-3 text-gray-600">
-              info@peacecareers.com
+              info@peacecareersglobal.com
             </p>
           </div>
 
@@ -32,7 +32,7 @@ export default function ContactInfo() {
             <Phone className="mb-5 h-10 w-10 text-yellow-600" />
             <h3 className="text-xl font-bold">Phone</h3>
             <p className="mt-3 text-gray-600">
-              +234 810 899 4952
+              +1 (581) 895 - 4725
             </p>
           </div>
 
@@ -40,7 +40,7 @@ export default function ContactInfo() {
             <MapPin className="mb-5 h-10 w-10 text-yellow-600" />
             <h3 className="text-xl font-bold">Location</h3>
             <p className="mt-3 text-gray-600">
-              Lagos, Nigeria
+              Worldwide
             </p>
           </div>
 
