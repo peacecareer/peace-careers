@@ -4,14 +4,14 @@ import FadeIn from "@/components/ui/FadeIn";
 import Image from "next/image";
 
 const companies = [
-  "/logos/google.jpg",
-  "/logos/microsoft.jpg",
+  "/logos/google.png",
+  "/logos/microsoft.png",
   "/logos/amazon.png",
   "/logos/meta.png",
-  "/logos/deloitte.png",
+  "/logos/deloitte.jpg",
   "/logos/kpmg.png",
   "/logos/pwc.png",
-  "/logos/tesla.jpg",
+  "/logos/tesla.png",
 ];
 
 export default function TrustedCompanies() {

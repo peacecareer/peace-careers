@@ -80,9 +80,9 @@ export default function Footer() {
 
   <li>📧 peace@peacecareers.com</li>
 
-  <li>📞 +234 810 899 4952</li>
+  <li>📞 +1 (581) 895 - 4725 </li>
 
-  <li>📍 Lagos, Nigeria</li>
+  <li>📍 Worldwide </li>
 
   <li>🕒 Mon – Sat | 9:00 AM – 6:00 PM</li>
 
